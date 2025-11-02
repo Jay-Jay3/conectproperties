@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+    --color-brand-blue: #00007e;
+    --color-brand-red: #b41818;
+    --color-brand-background: #ffffff;
+    --color-brand-background2: #F4F4F4;
+    --color-brand-accent: #a6b5b8;
+    --color-brand-text: #0168ea;
+    --color-brand-gold: #FFD700;
+};
+
+@layer base {
+    h1{
+        @apply 
+        text-6xl lg:text-8xl 
+        font-serif
+        font-stretch-200% 
+        font-extrabold
+        text-center lg:text-center 
+        text-brand-accent 
+        text-shadow-sm 
+        leading-14 lg:leading-20
+    }
+        /* font-stretch-extra-expanded */
+
+
+    h2{
+        @apply 
+        text-3xl 
+        font-serif
+        font-bold 
+        text-center
+        text-brand-text
+        pt-5
+    }
+
+    h3 {
+        @apply 
+        text-4xl 
+        font-serif
+        font-bold 
+        text-start
+        text-brand-text
+        p-5
+    }
+
+    h4 {
+        @apply 
+        text-2xl 
+        font-serif
+        font-bold 
+        text-brand-blue
+    }
+
+    p{
+        @apply 
+        text-brand-blue 
+        font-sans
+        font-normal
+        text-center
+        mx-auto
+        max-w-fit
+        inline-block
+    }
+}
+
+@layer components {
+    .extremes {
+        @apply 
+        flex 
+        flex-row
+        max-w-screen 
+        h-fit 
+        py-2 
+        px-5 
+        bg-brand-blue 
+        border-b-2 
+        border-brand-red
+    }
+
+    .para-title {
+        @apply 
+        font-serif 
+        text-sm md:text-lg lg:text-lg
+        font-normal md:font-bold
+        justify-center 
+        text-center
+        text-brand-red 
+        leading-4 md:leading-6
+    }
+
+    .contacts {
+        @apply 
+        text-slate-700
+        font-mono
+        font-normal
+        text-start
+        leading-6
+    }
+
+    .btns{
+        @apply p-3 
+        max-w-fit
+        outline-2 
+        outline-brand-red hover:outline-brand-gold
+        rounded-xl 
+        mx-auto 
+        items-center
+        text-brand-blue hover:text-brand-gold
+        hover:scale-105
+    }
+}
+

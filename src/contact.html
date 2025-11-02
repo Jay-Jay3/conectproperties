@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./input.css">
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-brand-background">
+    <header class="extremes bg-brand-background">
+        <a class="w-10 h-10" href="./index.html">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.00 512.00" xml:space="preserve" fill="#FFD700" stroke="#FFD700" stroke-width="4.096"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="14.336000000000002"> <rect x="202.896" y="228" style="fill:#b41818;" width="309.104" height="56"></rect> <polygon style="fill:#0168ea;" points="209.832,129.184 0,256 209.832,382.816 "></polygon> <polygon style="fill:#00007e;" points="209.832,256 0,256 209.832,382.816 "></polygon> </g><g id="SVGRepo_iconCarrier"> <rect x="202.896" y="228" style="fill:#b41818;" width="309.104" height="56"></rect> <polygon style="fill:#0168ea;" points="209.832,129.184 0,256 209.832,382.816 "></polygon> <polygon style="fill:#00007e;" points="209.832,256 0,256 209.832,382.816 "></polygon> </g></svg>
+        </a>
+         <div class="w-full">
+            <h2 class="p-0 text-brand-blue"  id="title">Contact Us</h2>
+            <div class="flex flex-col items-center justify-center md:flex-row transition-all duration-300" id="menu">
+                <a href="./index.html"><h3 class="text-brand-red font-extralight text-xl">Home</h3></a>
+                <a href="./about.html"><h3 class="text-brand-red font-extralight text-xl">About</h3></a>
+                <a href="./contact.html"><h3 class="text-brand-red font-extralight text-xl">Contact Us</h3></a>
+            </div>
+        </div>
+        <button id="hammenu" class="flex flex-col m-2 justify-between w-8 h-6 transform transition-all duration-300">
+                <span class="block w-full h-1 bg-brand-red transition-all duration-500"  id="bar1"></span>
+                <span class="block w-full h-1 bg-brand-blue transition-all duration-500" id="bar2"></span>
+                <span class="block w-full h-1 bg-brand-accent transition-all duration-500" id="bar3"></span>
+        </button>
+    </header>
+    <div class="border-1 m-5 border-brand-accent bg-brand-background2">
+        <h3>Let's Talk</h3>
+        <p class="contacts">We will love to help you find your next dream home or where to rest after a day's work</p>
+    </div>
+    <div class="border-1 m-5 border-brand-accent bg-brand-background2">
+        <h4 class="text-start p-5 ">Send Us a Message </h4>
+        <p class="contacts">We will love to help you find your next dream home or where to rest after a day's work</p>
+    </div>
+    <script>
+        const ham = document.getElementById("hammenu");
+        const menu = document.getElementById("menu");
+        const title = document.getElementById("title");
+        const strok = [];
+        for(var i = 1; i<4; i++){
+            strok.push(document.getElementById(`bar${i}`));
+        }
+        menu.classList.add("hidden");
+        ham.addEventListener('click', ()=>{
+            strok[0].classList.toggle("rotate-45");
+            strok[1].classList.toggle("-rotate-45");
+            strok[0].classList.toggle("translate-y-2.5")
+            strok[1].classList.toggle("bg-brand-red");
+            strok[2].classList.toggle("opacity-0")
+            menu.classList.toggle('hidden');
+            title.classList.toggle('hidden');
+        })
+    </script>
+</body>
+</html>
